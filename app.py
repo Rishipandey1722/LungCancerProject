@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from joblib import load
+import os
 
 app = Flask(__name__)
 
@@ -28,7 +29,6 @@ def result():
     input_data = [int(value) for value in data.values()]
     input_data.insert(0 , 10)
     input_data.insert(1 , 0)
-    print(len(input_data))
     prediction = model.predict([input_data])
 
     # return jsonify({'prediction': int(prediction[0])})
