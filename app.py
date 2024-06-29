@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from joblib import load
 
-app = Flask(__name__)
+app = Flask(__name__ )
 
 # Load the model
 model = load('model.joblib')
@@ -36,4 +36,4 @@ def result():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
