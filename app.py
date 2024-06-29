@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from joblib import load
+import os
 
 app = Flask(__name__ )
 
@@ -28,7 +29,6 @@ def result():
     input_data = [int(value) for value in data.values()]
     input_data.insert(0 , 10)
     input_data.insert(1 , 0)
-    print(len(input_data))
     prediction = model.predict([input_data])
 
     # return jsonify({'prediction': int(prediction[0])})
@@ -36,4 +36,9 @@ def result():
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run()
+=======
+    port = int(os.environ.get('PORT', 8000))  # Default to port 8000 if PORT is not set
+    app.run(host='0.0.0.0', port=port)
+>>>>>>> 45c3f97e4f1bc2f125cca220d15132d5137ad78a
