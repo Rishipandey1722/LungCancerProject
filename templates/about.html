@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Lung Cancer Prediction Project</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #007bff;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About Project</a>
+        <a href="/contact">Contact </a>
+    </div>
+    <div class="container">
+        <h1>My Lung Cancer Prediction Project</h1>
+        
+        <h2>Objective</h2>
+        <p>My goal is to learn and build a machine learning model that predicts the likelihood of lung cancer based on various health and lifestyle factors of patients.</p>
+        
+        <h2>What I've Done</h2>
+        <ul>
+            <li><strong>Data Collection:</strong> I collected a dataset with 26 attributes and 1000 instances.</li>
+            <li><strong>Data Cleaning and Preprocessing:</strong> Cleaned the dataset to handle missing values and outliers, ensuring data quality. Preprocessed the data by encoding categorical variables, scaling numerical features, and splitting it into training and testing sets.</li>
+            <li><strong>Exploratory Data Analysis (EDA):</strong> Explored the data to understand attribute distributions, correlations, and patterns related to lung cancer levels (high, medium, low).</li>
+            <li><strong>Feature Selection:</strong> Identified important features using correlation analysis and feature importance scores from models. Chose relevant features that significantly impact predicting lung cancer levels.</li>
+            <li><strong>Model Selection and Training:</strong> Selected and trained multiple classification algorithms suitable for categorical data, including Logistic Regression, Naive Bayes, and Random Forest.</li>
+            <li><strong>Model Evaluation:</strong> Evaluated model performance using metrics such as accuracy, precision, recall, and F1-score. Conducted cross-validation to ensure models generalize well to new data.</li>
+            <li><strong>Model Ensembling:</strong> Implemented a Voting Classifier to combine predictions from Logistic Regression, Naive Bayes, and Random Forest for improved accuracy and reliability.</li>
+            <li><strong>Web Interface Development:</strong> Designed a user-friendly web interface using Flask, HTML, and CSS. Created pages for user input, prediction results, project details, process flow, and other informative sections.</li>
+            <li><strong>Deployment:</strong> Deployed the machine learning model and web application on platforms like PythonAnywhere for public access. Ensured the application is functional and accessible to users for predicting lung cancer risk based on their input data.</li>
+        </ul>
+        
+        <div>
+            <h2>Tools used:</h2>
+            <ul>
+                <li>Python </li>
+                <li>Flask 2.0.1</li>
+                <li>Scikit-learn 0.24.2</li>
+                <li>Numpy , Pandas</li>
+                <li>HTML5/CSS3 for front-end development</li>
+                <li>Google collab Notebook for initial data exploration and analysis</li>
+            </ul>
+        </div>
+        
+
+
+        <h2>Future Plans</h2>
+        <ul>
+            <li><strong>Tuning and Optimization:</strong> Plan to fine-tune models, optimize hyperparameters, and explore advanced techniques for better predictions.</li>
+            <li><strong>User Engagement:</strong> Gather user feedback and update the application based on user needs.</li>
+            <li><strong>Expansion:</strong> Consider adding more features, datasets, or predictive models related to respiratory health or other medical conditions.</li>
+        </ul>
+        
+        <h2>Source of Dataset</h2>
+        <p>The dataset used for this project was collected from Kaggle <a href="https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link/data " target="_blank">Dataset</a>.</p>
+        
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #007bff;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="/about">About Project</a>
+        <a href="/contact">Contact </a>
+    </div>
+
+    <div id="home" class="content">
+        <h1>Welcome to Lung Cancer Prediction Project</h1>
+        <form method="post" action="/result">
+            <h2>Lung Cancer Prediction Form</h2>
+            
+            <div class="form-group">
+                <label for="air-pollution">Air Pollution (1-8)</label>
+                <input type="number" id="air-pollution" name="air-pollution" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="alcohol-use">Alcohol Use (1-8)</label>
+                <input type="number" id="alcohol-use" name="alcohol-use" min="1" max="8" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dust-allergy">Dust Allergy (1-8)</label>
+                <input type="number" id="dust-allergy" name="dust-allergy" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="oh">Occupational Hazards (1-8)</label>
+                <input type="number" id="oh" name="oh" min="1" max="8" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="genetic-risk">Genetic Risk (1-7)</label>
+                <input type="number" id="genetic-risk" name="genetic-risk" min="1" max="7" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="chronic-lung-disease">Chronic Lung Disease (1-7)</label>
+                <input type="number" id="chronic-lung-disease" name="chronic-lung-disease" min="1" max="7" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="balanced-diet">Balanced Diet (1-7)</label>
+                <input type="number" id="balanced-diet" name="balanced-diet" min="1" max="7" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="obesity">Obesity (1-7)</label>
+                <input type="number" id="obesity" name="obesity" min="1" max="7" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="smoking">Smoking (1-8)</label>
+                <input type="number" id="smoking" name="smoking" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="passive-smoker">Passive Smoker (1-8)</label>
+                <input type="number" id="passive-smoker" name="passive-smoker" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="chest-pain">Chest Pain (1-9)</label>
+                <input type="number" id="chest-pain" name="chest-pain" min="1" max="9" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="coughing-blood">Coughing Blood (1-9)</label>
+                <input type="number" id="coughing-blood" name="coughing-blood" min="1" max="9" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="fatigue">Fatigue (1-9)</label>
+                <input type="number" id="fatigue" name="fatigue" min="1" max="9" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="weight-loss">Weight Loss (1-8)</label>
+                <input type="number" id="weight-loss" name="weight-loss" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="shortness-of-breath">Shortness of Breath (1-9)</label>
+                <input type="number" id="shortness-of-breath" name="shortness-of-breath" min="1" max="9" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="wheezing">Wheezing (1-8)</label>
+                <input type="number" id="wheezing" name="wheezing" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="swallowing-difficulty">Swallowing Difficulty (1-8)</label>
+                <input type="number" id="swallowing-difficulty" name="swallowing-difficulty" min="1" max="8" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="clubbing-fingernails">Clubbing of Finger Nails (1-9)</label>
+                <input type="number" id="clubbing-fingernails" name="clubbing-fingernails" min="1" max="9" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="frequent-cold">Frequent Cold (1-7)</label>
+                <input type="number" id="frequent-cold" name="frequent-cold" min="1" max="7" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="dry-cough">Dry Cough (1-7)</label>
+                <input type="number" id="dry-cough" name="dry-cough" min="1" max="7" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="snoring">Snoring (1-7)</label>
+                <input type="number" id="snoring" name="snoring" min="1" max="7" required>
+            </div>
+        
+            <button type="submit">Submit</button>
+            <button type="button" id="fill-random">Fill Random Values</button>
+        
+        </form>
+    </div>
+
+
+
+ 
+
+    <script>
+        const inputIds = [
+      "air-pollution",
+      "alcohol-use",
+      "dust-allergy",
+      "oh",
+      "genetic-risk",
+      "chronic-lung-disease",
+      "balanced-diet",
+      "obesity",
+      "smoking",
+      "passive-smoker",
+      "chest-pain",
+      "coughing-blood",
+      "fatigue",
+      "weight-loss",
+      "shortness-of-breath",
+      "wheezing",
+      "swallowing-difficulty",
+      "clubbing-fingernails",
+      "frequent-cold",
+      "dry-cough",
+      "snoring"
+    ];
+    
+        document
+          .getElementById("fill-random")
+          .addEventListener("click", function () {
+            for (let i = 0; i < 21; i++) {
+              let randomValue = 0;
+              if(i == 0 || i == 1 || i == 2 || i == 3 ||i == 8 ||i == 13 ||i == 16 || i == 15 || i == 9){
+                  randomValue = Math.floor(Math.random() * 8) + 1;}
+              if( i == 4 || i == 5 ||i == 6 ||i == 7 || i ==18 || i == 19 || i==20){
+                  randomValue = Math.floor(Math.random() * 7) + 1;}
+              if(i == 10 || i == 11 || i == 12 || i == 14 || i == 17 ){
+                  randomValue = Math.floor(Math.random() * 9) + 1;}
+    
+    
+    
+              document.getElementById(inputIds[i]).value = randomValue;
+            }
+          });
+      </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .result-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 32px;
+        }
+        .prediction {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
+        }
+        .guide {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: left;
+        }
+        .guide ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .guide ul li {
+            background: #f4f4f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        a, button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        a:hover, button:hover {
+            background-color: #0056b3;
+        }
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="result-container">
+        <h1>Lung Cancer Prediction Result</h1>
+        <p>Your predicted cancer level is: <span class="prediction">{{ prediction }}</span></p>
+        <div class="guide">
+            <h2>Prediction Guide:</h2>
+            <ul>
+                <li><strong>0:</strong> Low risk of lung cancer</li>
+                <li><strong>1:</strong> Medium risk of lung cancer</li>
+                <li><strong>2:</strong> High risk of lung cancer</li>
+            </ul>
+        </div>
+        <a href="/">Back to Home</a>
+        <form action="/" method="get" style="display:inline;">
+            <button type="submit">Recheck</button>
+        </form>
+    </div>
+</body>
+
+
+</html>
